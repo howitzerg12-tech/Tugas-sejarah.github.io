@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sejarah Spanyol Masuk Indonesia</title>
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #eef6ff;
+
+            color: #222;
+
+            overflow-x: hidden;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+
+            width: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #182848,
+                    #4b6cb7
+                );
+
+            color: white;
+
+            padding:
+                18px
+                25px;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 4px 15px
+                rgba(0,0,0,0.12);
+
+        }
+
+
+        .header-content {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .logo {
+
+            font-size: 23px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 65vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding:
+                70px
+                25px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #fff3d6,
+                    #dff3ff
+                );
+
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+        }
+
+
+        .hero-icon {
+
+            font-size: 65px;
+
+            margin-bottom: 15px;
+
+            animation:
+                floating 3s ease-in-out infinite;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: 46px;
+
+            color: #182848;
+
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #555;
+
+        }
+
+
+        .scroll-text {
+
+            margin-top: 35px;
+
+            color: #4b6cb7;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            animation:
+                scrollHint 1.5s ease-in-out infinite;
+
+        }
+
+
+        /* =====================================================
+           KONTEN
+        ===================================================== */
+
+        .container {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding:
+                60px
+                20px
+                80px;
+
+        }
+
+
+        /* =====================================================
+           JUDUL SECTION
+        ===================================================== */
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        .section-title h2 {
+
+            font-size: 34px;
+
+            color: #182848;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .section-title p {
+
+            color: #666;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =====================================================
+           CARD
+        ===================================================== */
+
+        .history-card {
+
+            background: white;
+
+            border-radius: 20px;
+
+            padding: 30px;
+
+            margin-bottom: 30px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.08);
+
+            border-left:
+                7px solid
+                #4b6cb7;
+
+        }
+
+
+        .history-card h2 {
+
+            color: #d62828;
+
+            font-size: 24px;
+
+            margin-bottom: 18px;
+
+            line-height: 1.4;
+
+        }
+
+
+        .history-card p {
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            text-align: justify;
+
+            color: #333;
+
+        }
+
+
+        .history-card p + p {
+
+            margin-top: 18px;
+
+        }
+
+
+        /* =====================================================
+           NOMOR CARD
+        ===================================================== */
+
+        .number {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 38px;
+
+            height: 38px;
+
+            border-radius: 50%;
+
+            background: #4b6cb7;
+
+            color: white;
+
+            margin-right: 8px;
+
+            font-size: 17px;
+
+        }
+
+
+        /* =====================================================
+           HIGHLIGHT
+        ===================================================== */
+
+        .highlight {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff3d6,
+                    #fff9ec
+                );
+
+            border:
+                2px solid
+                #ffd166;
+
+            border-left:
+                7px solid
+                #f0a500;
+
+        }
+
+
+        .highlight h2 {
+
+            color: #b45309;
+
+        }
+
+
+        /* =====================================================
+           TIMELINE PERJALANAN
+        ===================================================== */
+
+        .journey {
+
+            margin-top: 55px;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #182848,
+                    #4b6cb7
+                );
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+        .journey h2 {
+
+            font-size: 30px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .journey-description {
+
+            color:
+                rgba(255,255,255,0.85);
+
+            line-height: 1.7;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        /* =====================================================
+           ROUTE
+        ===================================================== */
+
+        .route {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+        .place {
+
+            padding:
+                14px
+                17px;
+
+            border-radius: 15px;
+
+            background:
+                rgba(255,255,255,0.14);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.2);
+
+            backdrop-filter:
+                blur(5px);
+
+            font-weight: bold;
+
+            transition:
+                0.3s ease;
+
+        }
+
+
+        .place:hover {
+
+            transform:
+                translateY(-6px);
+
+            background:
+                rgba(255,255,255,0.25);
+
+        }
+
+
+        .arrow {
+
+            font-size: 24px;
+
+            color: #ffd166;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =====================================================
+           KESIMPULAN
+        ===================================================== */
+
+        .conclusion {
+
+            margin-top: 40px;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background: white;
+
+            border:
+                2px solid
+                #4b6cb7;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.07);
+
+        }
+
+
+        .conclusion h2 {
+
+            color: #182848;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .conclusion p {
+
+            line-height: 1.9;
+
+            text-align: justify;
+
+        }
+
+
+        /* =====================================================
+           BUTTON
+        ===================================================== */
+
+        .back-area {
+
+            text-align: center;
+
+            margin-top: 45px;
+
+        }
+
+
+        .back-button {
+
+            display: inline-block;
+
+            padding:
+                14px
+                25px;
+
+            background:
+                #e63946;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border-radius: 12px;
+
+            transition:
+                0.3s ease;
+
+        }
+
+
+        .back-button:hover {
+
+            background:
+                #c92d39;
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 8px 20px
+                rgba(230,57,70,0.25);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background:
+                #182848;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           ANIMASI SCROLL
+           
+           PENTING:
+           Secara default elemen TETAP TERLIHAT.
+
+           JavaScript hanya menambahkan
+           class "scroll-animation".
+
+           Jadi jika JS gagal,
+           halaman tidak blank.
+        ===================================================== */
+
+        .scroll-animation {
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+
+        }
+
+
+        body.js-active
+        .scroll-animation {
+
+            opacity: 0;
+
+            transform:
+                translateY(50px);
+
+        }
+
+
+        body.js-active
+        .scroll-animation.show {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        /* =====================================================
+           ANIMASI CARD DARI KIRI
+        ===================================================== */
+
+        body.js-active
+        .from-left {
+
+            opacity: 0;
+
+            transform:
+                translateX(-60px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+
+        }
+
+
+        body.js-active
+        .from-left.show {
+
+            opacity: 1;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        /* =====================================================
+           ANIMASI DARI KANAN
+        ===================================================== */
+
+        body.js-active
+        .from-right {
+
+            opacity: 0;
+
+            transform:
+                translateX(60px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+
+        }
+
+
+        body.js-active
+        .from-right.show {
+
+            opacity: 1;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        /* =====================================================
+           ANIMASI HERO
+        ===================================================== */
+
+        @keyframes floating {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-10px);
+
+            }
+
+        }
+
+
+        @keyframes scrollHint {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(7px);
+
+            }
+
+        }
+
+
+        /* =====================================================
+           HP
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+
+            header {
+
+                padding:
+                    17px
+                    20px;
+
+            }
+
+
+            .logo {
+
+                font-size: 20px;
+
+            }
+
+
+            .hero {
+
+                min-height: 70vh;
+
+                padding:
+                    55px
+                    20px;
+
+            }
+
+
+            .hero-icon {
+
+                font-size: 55px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .hero p {
+
+                font-size: 16px;
+
+                line-height: 1.7;
+
+            }
+
+
+            .container {
+
+                padding:
+                    45px
+                    15px
+                    60px;
+
+            }
+
+
+            .section-title {
+
+                margin-bottom: 30px;
+
+            }
+
+
+            .section-title h2 {
+
+                font-size: 28px;
+
+            }
+
+
+            .history-card {
+
+                padding:
+                    22px;
+
+                margin-bottom: 25px;
+
+                border-radius: 17px;
+
+            }
+
+
+            .history-card h2 {
+
+                font-size: 21px;
+
+            }
+
+
+            .history-card p {
+
+                font-size: 16px;
+
+                line-height: 1.8;
+
+                text-align: left;
+
+            }
+
+
+            .number {
+
+                width: 33px;
+
+                height: 33px;
+
+                font-size: 15px;
+
+            }
+
+
+            .journey {
+
+                padding:
+                    30px
+                    18px;
+
+                border-radius: 20px;
+
+            }
+
+
+            .journey h2 {
+
+                font-size: 26px;
+
+            }
+
+
+            .route {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+
+            .arrow {
+
+                transform:
+                    rotate(90deg);
+
+            }
+
+
+            .place {
+
+                width: 85%;
+
+                padding:
+                    13px;
+
+            }
+
+
+            .conclusion {
+
+                padding:
+                    23px;
+
+            }
+
+
+            .conclusion p {
+
+                text-align: left;
+
+                font-size: 16px;
+
+            }
+
+
+        }
+
+
+        /* =====================================================
+           HP SANGAT KECIL
+        ===================================================== */
+
+        @media (max-width: 380px) {
+
+            .hero h1 {
+
+                font-size: 29px;
+
+            }
+
+
+            .history-card h2 {
+
+                font-size: 19px;
+
+            }
+
+
+            .history-card p {
+
+                font-size: 15px;
+
+            }
+
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                🇪🇸 Sejarah Indonesia
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-icon">
+                🇪🇸
+            </div>
+
+            <h1>
+                Sejarah Masuknya
+                Bangsa Spanyol
+                ke Indonesia
+            </h1>
+
+            <p>
+                Perjalanan panjang bangsa Spanyol
+                dalam mencari jalur perdagangan
+                dan sumber rempah-rempah
+                hingga mencapai Maluku.
+            </p>
+
+            <div class="scroll-text">
+                ↓ Scroll untuk memulai perjalanan sejarah ↓
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         KONTEN UTAMA
+    ===================================================== -->
+
+    <main class="container">
+
+
+        <!-- JUDUL -->
+
+        <div class="section-title scroll-animation">
+
+            <h2>
+                📜 Perjalanan Sejarah
+            </h2>
+
+            <p>
+                Ikuti setiap tahap perjalanan bangsa Spanyol
+                menuju Indonesia.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BAGIAN 1
+        ================================================= -->
+
+        <article
+            class="history-card scroll-animation from-left"
+        >
+
+            <h2>
+
+                <span class="number">
+                    1
+                </span>
+
+                🌊 Awal Penjelajahan Samudra
+
+            </h2>
+
+
+            <p>
+
+                Bangsa Spanyol mulai melakukan
+                penjelajahan samudra pada akhir
+                abad ke-15 untuk mencari wilayah
+                baru dan jalur perdagangan menuju
+                sumber rempah-rempah.
+
+            </p>
+
+
+            <p>
+
+                Setelah Portugis berhasil menemukan
+                jalur ke Asia melalui Afrika,
+                Spanyol berusaha menemukan jalur
+                lain dengan berlayar ke arah barat.
+
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BAGIAN 2
+        ================================================= -->
+
+        <article
+            class="history-card scroll-animation from-right"
+        >
+
+            <h2>
+
+                <span class="number">
+                    2
+                </span>
+
+                🚢 Ekspedisi Ferdinand Magellan
+
+            </h2>
+
+
+            <p>
+
+                Pada tahun 1519, ekspedisi yang
+                dipimpin Ferdinand Magellan
+                berangkat dari Spanyol.
+
+                Mereka menyeberangi Samudra Atlantik,
+                melewati Amerika Selatan, kemudian
+                menemukan dan melewati Selat Magellan
+                hingga masuk ke Samudra Pasifik.
+
+            </p>
+
+
+            <p>
+
+                Setelah perjalanan panjang,
+                ekspedisi tersebut tiba di Filipina
+                pada tahun 1521.
+
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BAGIAN 3
+        ================================================= -->
+
+        <article
+            class="history-card scroll-animation from-left"
+        >
+
+            <h2>
+
+                <span class="number">
+                    3
+                </span>
+
+                🇵🇭 Dari Filipina Menuju Maluku
+
+            </h2>
+
+
+            <p>
+
+                Setelah Magellan meninggal di Filipina,
+                pelayaran dilanjutkan oleh
+                Juan Sebastián Elcano.
+
+            </p>
+
+
+            <p>
+
+                Armada Spanyol kemudian melanjutkan
+                perjalanan menuju Maluku dan tiba
+                di wilayah Tidore pada tahun 1521.
+
+            </p>
+
+
+            <p>
+
+                Di Maluku, Spanyol menjalin hubungan
+                dengan Kesultanan Tidore, sedangkan
+                Portugis bersekutu dengan
+                Kesultanan Ternate.
+
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BAGIAN 4
+        ================================================= -->
+
+        <article
+            class="history-card scroll-animation from-right"
+        >
+
+            <h2>
+
+                <span class="number">
+                    4
+                </span>
+
+                ⚔️ Persaingan Spanyol dan Portugis
+
+            </h2>
+
+
+            <p>
+
+                Persaingan antara Spanyol dan Portugis
+                dalam menguasai perdagangan
+                rempah-rempah akhirnya diselesaikan
+                melalui Perjanjian Zaragoza (1529).
+
+            </p>
+
+
+            <p>
+
+                Berdasarkan perjanjian tersebut,
+                Spanyol meninggalkan Maluku dan
+                lebih memusatkan kekuasaannya
+                di Filipina, sementara Portugis
+                mempertahankan pengaruhnya
+                di Maluku.
+
+            </p>
+
+        </article>
+
+
+
+        <!-- =================================================
+             JALUR PERJALANAN
+        ================================================= -->
+
+        <section
+            class="journey scroll-animation"
+            id="perjalanan"
+        >
+
+            <h2>
+                🗺️ Jalur Perjalanan Spanyol
+            </h2>
+
+
+            <p class="journey-description">
+
+                Inilah jalur perjalanan ekspedisi
+                Spanyol hingga mencapai wilayah
+                Maluku dan Tidore.
+
+            </p>
+
+
+            <div class="route">
+
+
+                <div class="place">
+                    🇪🇸 Spanyol
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="place">
+                    🌊 Samudra Atlantik
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="place">
+                    🌎 Amerika Selatan
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="place">
+                    🚢 Selat Magellan
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="place">
+                    🌊 Samudra Pasifik
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="place">
+                    🇵🇭 Filipina
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="place">
+                    🌴 Maluku
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="place">
+                    📍 Tidore
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SINGKATNYA
+        ================================================= -->
+
+        <section
+            class="history-card highlight scroll-animation from-left"
+        >
+
+            <h2>
+                💡 Singkatnya
+            </h2>
+
+
+            <p>
+
+                🇪🇸 Spanyol
+                →
+                🌊 Samudra Atlantik
+                →
+                🌎 Amerika Selatan
+                →
+                🚢 Selat Magellan
+                →
+                🌊 Samudra Pasifik
+                →
+                🇵🇭 Filipina
+                →
+                🌴 Maluku
+                →
+                📍 Tidore
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             KESIMPULAN
+        ================================================= -->
+
+        <section
+            class="conclusion scroll-animation from-right"
+        >
+
+            <h2>
+                📚 Kesimpulan
+            </h2>
+
+
+            <p>
+
+                Bangsa Spanyol datang ke Indonesia
+                dalam rangka mencari jalur perdagangan
+                dan sumber rempah-rempah.
+
+                Setelah melakukan perjalanan panjang
+                melalui Samudra Atlantik, Amerika Selatan,
+                Selat Magellan, Samudra Pasifik, dan Filipina,
+                armada Spanyol akhirnya mencapai Maluku
+                dan menjalin hubungan dengan
+                Kesultanan Tidore.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             KEMBALI
+        ================================================= -->
+
+        <div class="back-area">
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ← Kembali ke Halaman Utama
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Kelompok 1 - Sejarah
+        </p>
+
+        <p>
+            Materi Sejarah Masuknya Bangsa Spanyol ke Indonesia
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT ANIMASI SCROLL
+    ===================================================== -->
+
+    <script>
+
+        /*
+        Aktifkan mode animasi.
+
+        Class ini baru ditambahkan setelah JavaScript
+        benar-benar berjalan.
+
+        Jadi kalau JavaScript gagal:
+        semua materi tetap terlihat.
+        */
+
+        document.body.classList.add("js-active");
+
+
+        /*
+        Ambil semua elemen yang ingin dianimasikan.
+        */
+
+        const animatedElements =
+            document.querySelectorAll(
+                ".scroll-animation"
+            );
+
+
+        /*
+        IntersectionObserver mendeteksi ketika
+        elemen masuk ke layar.
+        */
+
+        const observer =
+            new IntersectionObserver(
+
+                function(entries) {
+
+                    entries.forEach(
+                        function(entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                /*
+                                Munculkan elemen.
+                                */
+
+                                entry.target.classList.add(
+                                    "show"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    /*
+                    15% bagian elemen harus
+                    masuk layar.
+                    */
+
+                    threshold: 0.15
+
+                }
+
+            );
+
+
+        /*
+        Mulai mengamati semua elemen.
+        */
+
+        animatedElements.forEach(
+            function(element) {
+
+                observer.observe(element);
+
+            }
+        );
+
+
+        /*
+        Animasi route satu per satu.
+        */
+
+        const places =
+            document.querySelectorAll(
+                ".place"
+            );
+
+
+        places.forEach(
+            function(place, index) {
+
+                place.style.transitionDelay =
+                    (index * 0.08) + "s";
+
+            }
+        );
+
+
+        /*
+        Animasi panah satu per satu.
+        */
+
+        const arrows =
+            document.querySelectorAll(
+                ".arrow"
+            );
+
+
+        arrows.forEach(
+            function(arrow, index) {
+
+                arrow.style.transitionDelay =
+                    (index * 0.08) + "s";
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
