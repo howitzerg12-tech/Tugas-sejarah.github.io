@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spanyol di Indonesia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            width: 100%;
+            background: linear-gradient(135deg, #182848, #4b6cb7);
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: calc(100vh - 65px);
+            padding: 60px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                radial-gradient(circle at top left, rgba(75,108,183,0.15), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(24,40,72,0.12), transparent 35%),
+                #f4f7fb;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 950px;
+        }
+
+        /* Badge */
+
+        .badge {
+            display: inline-block;
+            padding: 8px 18px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            color: #4b6cb7;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 20px;
+            animation: fadeDown 0.8s ease;
+        }
+
+        /* Kelas */
+
+        .kelas {
+            font-size: clamp(34px, 7vw, 62px);
+            font-weight: 800;
+            color: #182848;
+            margin-bottom: 15px;
+            animation: fadeDown 1s ease;
+        }
+
+        .judul {
+            font-size: clamp(28px, 6vw, 50px);
+            font-weight: 800;
+            color: #4b6cb7;
+            margin-bottom: 18px;
+            animation: fadeUp 1s ease 0.2s both;
+        }
+
+        .deskripsi {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+            color: #555;
+            font-size: 17px;
+            animation: fadeUp 1s ease 0.4s both;
+        }
+
+        /* ================= INFO CARD ================= */
+
+        .info-container {
+            max-width: 850px;
+            margin: 40px auto 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            animation: fadeUp 1s ease 0.6s both;
+        }
+
+        .info-card {
+            background: white;
+            padding: 22px 15px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .info-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .info-title {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #182848;
+        }
+
+        /* ================= ANGGOTA ================= */
+
+        .anggota {
+            max-width: 700px;
+            margin: 20px auto 35px;
+            background: rgba(255,255,255,0.8);
+            border: 1px solid rgba(75,108,183,0.12);
+            border-radius: 20px;
+            padding: 25px;
+            animation: fadeUp 1s ease 0.8s both;
+        }
+
+        .anggota h3 {
+            color: #182848;
+            margin-bottom: 18px;
+            font-size: 22px;
+        }
+
+        .anggota-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            text-align: left;
+        }
+
+        .anggota-item {
+            background: #f4f7fb;
+            padding: 12px 15px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+
+        .anggota-item span {
+            font-weight: bold;
+            color: #4b6cb7;
+        }
+
+        /* ================= TUJUAN ================= */
+
+        .tujuan {
+            background: white;
+            padding: 80px 7%;
+            text-align: center;
+        }
+
+        .tujuan-box {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .tujuan h2 {
+            font-size: 40px;
+            color: #182848;
+            margin-bottom: 20px;
+        }
+
+        .tujuan p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* ================= BUTTON ================= */
+
+        .button {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 15px 38px;
+            background: linear-gradient(135deg, #1877f2, #4b6cb7);
+            color: white;
+            text-decoration: none;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: bold;
+            box-shadow: 0 10px 25px rgba(75,108,183,0.25);
+            transition: 0.3s;
+            animation: fadeUp 1s ease 1s both;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(75,108,183,0.35);
+        }
+
+        /* ================= GAMBAR ================= */
+
+        .gambar-section {
+            padding: 70px 7%;
+            text-align: center;
+            background: #f4f7fb;
+        }
+
+        .gambar-section h2 {
+            font-size: 34px;
+            color: #182848;
+            margin-bottom: 25px;
+        }
+
+        .gambar {
+            width: min(850px, 100%);
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            transition: 0.4s;
+        }
+
+        .gambar:hover {
+            transform: scale(1.02);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #182848;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+        /* ================= ANIMASI ================= */
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 45px 20px;
+                min-height: auto;
+            }
+
+            .kelas {
+                font-size: 42px;
+            }
+
+            .judul {
+                font-size: 32px;
+            }
+
+            .deskripsi {
+                font-size: 15px;
+            }
+
+            .info-container {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                gap: 12px;
+            }
+
+            .info-card {
+                padding: 18px;
+            }
+
+            .anggota-list {
+                grid-template-columns: 1fr;
+            }
+
+            .tujuan {
+                padding: 60px 20px;
+            }
+
+            .tujuan h2 {
+                font-size: 32px;
+            }
+
+            .tujuan p {
+                font-size: 15px;
+            }
+
+            .gambar-section {
+                padding: 50px 20px;
+            }
+
+            .gambar-section h2 {
+                font-size: 28px;
+            }
+
+            .gambar {
+                border-radius: 18px;
+            }
+        }
+
+        @media (max-width: 380px) {
+
+            .kelas {
+                font-size: 35px;
+            }
+
+            .judul {
+                font-size: 27px;
+            }
+
+            .badge {
+                font-size: 12px;
+            }
+
+            .button {
+                width: 100%;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="logo">🇪🇸 Sejarah Indonesia</div>
+
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#tujuan">Tujuan</a>
+            <a href="#kelompok">Kelompok</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO / PEMBUKA -->
+
+    <section class="hero" id="beranda">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                📚 WEBSITE PEMBELAJARAN SEJARAH
+            </div>
+
+            <!-- KELAS TETAP DI TENGAH -->
+            <h1 class="kelas">
+                XI TJKT 1
+            </h1>
+
+            <h2 class="judul">
+                🇪🇸 Spanyol di Indonesia
+            </h2>
+
+            <p class="deskripsi">
+                Website pembelajaran sejarah mengenai perjalanan,
+                kedatangan, dan pengaruh bangsa Spanyol di Indonesia
+                dalam mencari rempah-rempah.
+            </p>
+
+
+            <!-- INFORMASI UTAMA -->
+
+            <div class="info-container" id="kelompok">
+
+                <div class="info-card">
+                    <div class="info-icon">👥</div>
+                    <div class="info-title">
+                        Nama Kelompok
+                    </div>
+
+                    <div class="info-value">
+                        Kelompok 2
+                    </div>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="info-icon">📖</div>
+                    <div class="info-title">
+                        Mata Pelajaran
+                    </div>
+
+                    <div class="info-value">
+                        Sejarah
+                    </div>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="info-icon">🏫</div>
+                    <div class="info-title">
+                        Kelas
+                    </div>
+
+                    <div class="info-value">
+                        XI TJKT 1
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ANGGOTA -->
+
+            <div class="anggota">
+
+                <h3>👨‍🎓 Anggota Kelompok</h3>
+
+                <div class="anggota-list">
+
+                    <div class="anggota-item">
+                        <span>01.</span> Anggita Sari Dewi
+                    </div>
+
+                    <div class="anggota-item">
+                        <span>02.</span> Dylan Azura
+                    </div>
+
+                    <div class="anggota-item">
+                        <span>03.</span> Fadli Ilham
+                    </div>
+
+                    <div class="anggota-item">
+                        <span>04.</span> Firman Syawali
+                    </div>
+
+                    <div class="anggota-item">
+                        <span>05.</span> Quinsha Rizki Islami
+                    </div>
+
+                    <div class="anggota-item">
+                        <span>06.</span> Zakwan Daffa Saefullah
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <a href="index2.html" class="button">
+                📜 Mulai Belajar
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- TUJUAN -->
+
+    <section class="tujuan" id="tujuan">
+
+        <div class="tujuan-box">
+
+            <h2>
+                🎯 Tujuan Pembelajaran
+            </h2>
+
+            <p>
+                Untuk memahami proses kedatangan bangsa Spanyol ke Indonesia,
+                mengetahui tokoh dan jalur pelayarannya, serta memahami
+                dampaknya terhadap sejarah dan perdagangan rempah-rempah
+                di Indonesia.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAMBAR -->
+
+    <section class="gambar-section">
+
+        <h2>
+            🗺️ Jalur Pelayaran Spanyol
+        </h2>
+
+        <img
+            src="sejarah.png"
+            alt="Peta perjalanan bangsa Spanyol"
+            class="gambar"
+        >
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>
+            © 2026 XI TJKT 1 — Pembelajaran Sejarah
+        </p>
+
+        <p style="margin-top:8px;">
+            🇪🇸 Sejarah Masuknya Bangsa Spanyol ke Indonesia
+        </p>
+    </footer>
+
+
+</body>
+</html>
